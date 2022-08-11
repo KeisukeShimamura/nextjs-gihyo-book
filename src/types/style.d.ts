@@ -122,7 +122,7 @@ export type CSSPropertyGridColumn =
   | CSSPropertyGlobals
   | GridLine
   | (string & {})
- 
+
 export type CSSPropertyGridRow = CSSPropertyGlobals | GridLine | (string & {})
 
 export type CSSPropertyGridAutoFlow =
