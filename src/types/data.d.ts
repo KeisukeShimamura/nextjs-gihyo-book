@@ -10,7 +10,7 @@ export type User = {
   displayName: string
   email: string
   profileImageUrl: string
-  desciption: string
+  description: string
 }
 
 // 商品
@@ -22,7 +22,7 @@ export type Product = {
   imageUrl: string
   blurDataUrl: string
   price: number
-  conditon: Condition
+  condition: Condition
   owner: User
 }
 
