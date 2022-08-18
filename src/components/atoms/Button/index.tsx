@@ -1,6 +1,5 @@
 /* eslint-disabled prettier/prettier */
 import styled from 'styled-components'
-import style from 'styled-components'
 import { Responsive } from 'types'
 import {
   toPropValue,
@@ -113,7 +112,7 @@ const Button = styled.button<ButtonProps>`
             'background-color',
             variants[variant].backgroundColor,
             theme,
-          )
+          ),
         )
       !pseudoClass &&
         styles.push(
@@ -123,7 +122,7 @@ const Button = styled.button<ButtonProps>`
               variants[variant].pseudoClass.hover.backgroundColor,
               theme,
             )}
-          }`.replaceAll('\n', '')
+          }`.replaceAll('\n', ''),
         )
       !pseudoClass &&
         styles.push(
@@ -133,7 +132,7 @@ const Button = styled.button<ButtonProps>`
               variants[variant].pseudoClass.disabled.backgroundColor,
               theme,
             )}
-          }`.replaceAll('\n', '')
+          }`.replaceAll('\n', ''),
         )
       return styles.join('\n')
     }
@@ -142,7 +141,8 @@ const Button = styled.button<ButtonProps>`
   ${(props) => toPropValue('letter-spacing', props.letterSpacing, props.theme)}
   ${(props) => toPropValue('line-height', props.lineHeight, props.theme)}
   ${(props) => toPropValue('color', props.color, props.theme)}
-  ${(props) => toPropValue('background-color', props.backgroundColor, props.theme)}
+  ${(props) =>
+    toPropValue('background-color', props.backgroundColor, props.theme)}
   ${(props) => toPropValue('width', props.width, props.theme)}
   ${(props) => toPropValue('height', props.height, props.theme)}
   ${(props) => toPropValue('min-width', props.minWidth, props.theme)}

@@ -5,7 +5,7 @@ import Button from 'components/atoms/Button'
 import {
   SearchIcon,
   PersonIcon,
-  ShoppingCartIcon
+  ShoppingCartIcon,
 } from 'components/atoms/IconButton'
 import ShapeImage from 'components/atoms/ShapeImage'
 import Spinner from 'components/atoms/Spinner'
@@ -152,7 +152,7 @@ const Header = () => {
         </Nav>
       </Flex>
     </HeaderRoot>
-  ) 
+  )
 }
 
 export default Header

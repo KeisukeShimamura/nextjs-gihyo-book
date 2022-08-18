@@ -1,4 +1,3 @@
-
 import { ComponentMeta } from '@storybook/react'
 import AppLogo from './index'
 

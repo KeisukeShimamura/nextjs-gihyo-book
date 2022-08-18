@@ -47,7 +47,6 @@ export default {
   },
 } as ComponentMeta<typeof CartProduct>
 
-
 const Template: ComponentStory<typeof CartProduct> = (args) => (
   <CartProduct {...args} />
 )

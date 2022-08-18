@@ -5,12 +5,12 @@ export const REMOVE_PRODUCT = 'REMOVE_PRODUCT'
 
 type ShopReducerAction =
   | {
-      type: 'ADD_PRODUCT',
+      type: 'ADD_PRODUCT'
       payload: Product
     }
   | {
-      type: 'REMOVE_PRODUCT',
-      payload: number,
+      type: 'REMOVE_PRODUCT'
+      payload: number
     }
 
 /**

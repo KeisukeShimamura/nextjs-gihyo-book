@@ -24,7 +24,7 @@ const AuthContext = React.createContext<AuthContextType>({
   authUser: undefined,
   isLoading: false,
   signin: async () => Promise.resolve(),
-  signout:async () => Promise.resolve(),
+  signout: async () => Promise.resolve(),
   mutate: async () => Promise.resolve(undefined),
 })
 
@@ -52,7 +52,7 @@ export const AuthContextProvider = ({
   }
 
   // サインアウト
-  const signoutInternal =async () => {
+  const signoutInternal = async () => {
     await signout(context)
     await mutate()
   }

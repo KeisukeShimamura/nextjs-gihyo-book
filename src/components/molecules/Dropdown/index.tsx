@@ -9,13 +9,13 @@ const DropdownRoot = styled.div`
 `
 
 // ドロップダウン外観
-const DropdownControl = styled.div<{ hasError?: boolean}>`
+const DropdownControl = styled.div<{ hasError?: boolean }>`
   position: relative;
   overflow: hidden;
   background-color: #ffffff;
   border: ${({ theme, hasError }) =>
     hasError
-      ? `1px solid ${theme.colors.danger}`  
+      ? `1px solid ${theme.colors.danger}`
       : `1px solid ${theme.colors.border}`};
   border-radius: 5px;
   box-sizing: border-box;
@@ -25,7 +25,7 @@ const DropdownControl = styled.div<{ hasError?: boolean}>`
 `
 
 const DropdownValue = styled.div`
-  color: ${({ theme }) => theme.colors.text}
+  color: ${({ theme }) => theme.colors.text};
 `
 
 // ドロップダウンプレースホルダー

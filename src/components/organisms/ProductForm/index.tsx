@@ -48,7 +48,7 @@ const ProductForm = ({ onProductSave }: ProductFormProps) => {
           control={control}
           name="image"
           rules={{ required: true }}
-          render={({ field: {onChange, value }, fieldState: { error } }) => (
+          render={({ field: { onChange, value }, fieldState: { error } }) => (
             <InputImages
               images={value ?? []}
               onChange={onChange}

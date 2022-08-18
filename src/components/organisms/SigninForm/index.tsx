@@ -13,9 +13,12 @@ interface SigninFormProps {
   /**
    * サインインボタンを押した時のイベントハンドラ
    */
-  onSignin?: (username: string, password:string) => void
+  onSignin?: (username: string, password: string) => void
 }
 
+/**
+ * サインインフォーム
+ */
 const SigninForm = ({ onSignin }: SigninFormProps) => {
   // React Hook Formの使用
   const {
