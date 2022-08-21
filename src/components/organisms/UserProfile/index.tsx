@@ -7,7 +7,7 @@ interface UserProfileProps {
   /**
    * バリアント（表示スタイル）
    */
-  variant: 'normal' | 'small'
+  variant?: 'normal' | 'small'
   /**
    * ユーザ名
    */
