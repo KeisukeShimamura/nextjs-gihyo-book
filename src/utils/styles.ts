@@ -19,7 +19,7 @@ export type FontSize = FontSizeThemeKeys | (string & {})
 export type LetterSpacing = LetterSpacingThemeKeys | (string & {})
 export type LineHeight = LineHeightThemeKeys | (string & {})
 
-// ブレークポイント
+// ブレイクポイント
 const BREAKPOINTS: { [key: string]: string } = {
   sm: '640px', // 640px以上
   md: '768px', // 768px以上
@@ -32,7 +32,7 @@ const BREAKPOINTS: { [key: string]: string } = {
  * @param propKey CSSプロパティ
  * @param prop Responsive型
  * @param theme AppTheme
- * @returns CSSSプロパティとその値（ex. background-color: white;）
+ * @returns CSSプロパティとその値 (ex. background-color: white;)
  */
 export function toPropValue<T>(
   propKey: string,
@@ -109,28 +109,28 @@ function toThemeValueIfNeeded<T>(propKey: string, value: T, theme?: AppTheme) {
     return theme.space[value]
   } else if (
     theme &&
-    theme.space &&
+    theme.colors &&
     COLOR_KEYS.has(propKey) &&
     isColorThemeKeys(value, theme)
   ) {
     return theme.colors[value]
   } else if (
     theme &&
-    theme.space &&
+    theme.fontSizes &&
     FONT_SIZE_KEYS.has(propKey) &&
     isFontSizeThemeKeys(value, theme)
   ) {
     return theme.fontSizes[value]
   } else if (
     theme &&
-    theme.space &&
+    theme.letterSpacings &&
     LINE_SPACING_KEYS.has(propKey) &&
     isLetterSpacingThemeKeys(value, theme)
   ) {
     return theme.letterSpacings[value]
   } else if (
     theme &&
-    theme.space &&
+    theme.lineHeights &&
     LINE_HEIGHT_KEYS.has(propKey) &&
     isLineHeightThemeKeys(value, theme)
   ) {
