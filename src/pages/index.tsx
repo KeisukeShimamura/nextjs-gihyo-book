@@ -8,6 +8,7 @@ import ProductCardCarousel from 'components/organisms/ProductCardCrousel'
 import Layout from 'components/templates/Layout'
 import getAllProducts from 'services/products/get-all-products'
 import { ApiContext, Product } from 'types'
+import logger from 'utils/logger'
 
 type HomePageProps = InferGetStaticPropsType<typeof getStaticProps>
 
@@ -16,6 +17,7 @@ const HomePage: NextPage<HomePageProps> = ({
   clothersProducts,
   shoesProducts,
 }: HomePageProps) => {
+  logger.info('HomePageコンポーネントの描画関数内で呼ばれたログです')
   // 商品カードカルーセルをレンダリング
   const renderProductCardCarousel = (products: Product[]) => {
     return (
@@ -109,6 +111,7 @@ const HomePage: NextPage<HomePageProps> = ({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  logger.info('getStaticProps内で呼ばれたログです')
   const context: ApiContext = {
     apiRootUrl: process.env.API_BASE_URL || 'http://localhost:5000',
   }
