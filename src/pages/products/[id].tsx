@@ -118,7 +118,7 @@ const ProductPage: NextPage<ProductPageProps> = ({
             <Box>
               {product.description
                 .split('\n')
-                .map((text: string, i: number)=> (
+                .map((text: string, i: number) => (
                   <Text key={i} as="p">
                     {text}
                   </Text>
@@ -171,7 +171,7 @@ export const getStaticProps: GetStaticProps = async ({
       id: productId,
       product,
     },
-    revalidate: 10
+    revalidate: 10,
   }
 }
 
